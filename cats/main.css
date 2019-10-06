@@ -1,0 +1,13 @@
+.cat-carousel {
+    margin: 0 auto;
+    height: 400px;
+    width: 400px;
+}
+
+.hide-cat {
+    visibility: hidden;
+}
+
+.show-cat {
+    visibility: show;
+}
