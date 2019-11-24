@@ -227,6 +227,7 @@ WebCrawler.prototype._crawl_with_head_request = function(url) {
 
     request.on('socket', socket => {
         socket.setTimeout(1000);
+        
         socket.on('timeout', () => {
             request.abort();
         });
