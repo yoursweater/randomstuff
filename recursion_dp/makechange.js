@@ -40,7 +40,7 @@ const change2 = (cents, coins = 0, ) => {
   }
 
   let max = 99999999999999
-  for (let i = 0;i < coinTypes.length;i++) {
+  for (let i = 0; i < coinTypes.length; i++) {
     if (cents - coinTypes[i] >= 0) {
       let loose = change2(cents - coinTypes[i], coins + 1)
       if (loose < max) {
@@ -58,6 +58,8 @@ console.log(change2(50))
 let end2 = new Date() - start2
 console.info('Execution time: %dms', end2)
 
+
+// this takes longer for some reason? might be improperly written
 const change3 = (cents, coins = 0, memo = []) => {
   if (memo[cents]) {
     return memo[cents]
